@@ -17,7 +17,7 @@ mx_gdf2 = gpd.read_file(os.path.join('resources','gadm','MEX_adm1.shp'))
 mx_gdf3 = gpd.read_file(os.path.join('resources','gadm','MEX_adm2.shp'))
 
 #very big!!!
-mx_secciones = gpd.read_file(os.path.join('resources','oliveraherbert','SECCION.shp'))
+#mx_secciones = gpd.read_file(os.path.join('resources','oliveraherbert','SECCION.shp'))
 
 import random
 random_numbers = [random.randint(0,50) for _ in range(32)]
