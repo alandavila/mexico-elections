@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mexico Elections</title>
+    <!--bootstrap framework-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--social media fonts-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Google font style from https://fonts.google.com/-->
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <!--My local css file-->
+    <link href="css/style.css" rel="stylesheet" >
+    <!--Multi browser support-->
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <!--menu of page-->
+          <div id="menu"></div>
+          <script>
+            $(function () {
+              $("#menu").load("menu.html");
+            });
+          </script>
+        </div>
+      </div>
+      <!--spacer with a line-->
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+      <!--projects grid-->
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+          <h1 class="text-center jumbotron">Per State Geographical distribution of votes for PRI<h1>
+        </div>
+      </div>
+      <div class="row ">
+        <div class=" col-sm-offset-1 col-md-5 col-xs-12">
+          <h3 class="text-center">Project Description Title</h3>
+          <p class="text-center">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <a href="#">
+            <img class="img-responsive img_main" src="img/jets.png" alt="jets">
+          </a>
+          <h3 class="text-center">Image Title</h3>
+          <p class="text-center">Image description</p>
+        </div>
+      </div>
+      <div class="row">
+        <div id="footer"></div>
+          <script>
+            $(function(){
+              $("#footer").load("footer.html");
+            });
+          </script>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+/*For design purposes only*/
+/** {
+  border: 1px solid red !important;
+}*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lora', serif;
+}
+
+header {
+  padding: 25px;
+
+}
+
+footer {
+  padding: 25px;
+
+}
+
+.img_main {
+  margin: auto;
+}
+
+.jumbotron_main {
+  background-image: linear-gradient(90deg, #eee, #fff);
+}
+
+.text-thin {
+  font-weight: 100;
+}
+
+.title_main {
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+}
+
+.row_bottom {
+    font-size: 0;
+}
+.row_bottom > * {
+    float: none;
+    display: inline-block;
+    font-size: 14px;
+}
+.row_bottom > *:last-child {
+    vertical-align: bottom;
+}
+
+.row_top > * {
+    vertical-align: top;
+}
+.gradient_img{
+  position:relative;
+  /*display:inline-block;*/
+}
+.gradient_img:after{
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(0, 0, 0) 100%)
+}
+
+.gradient_img img {
+  width: auto;
+
+}
+.carousel-caption h3 {
+  color: white;
+  text-shadow: black;
+  /*background-color: #f2f2f2;*/
+}
+.carousel-caption p {
+  color: white;
+  text-shadow: black;
+  /*background-color: #f2f2f2;*/
+}
+/*
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}*/
+/*
+@media only screen and (max-width: 600px){
+  .col-4 {
+    background-color: blue;
+  }
+  p {
+    display: none;
+  }
+}
+*/
