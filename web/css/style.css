@@ -3,6 +3,10 @@
   border: 1px solid red !important;
 }*/
 
+table, tbody, tr{
+  text-align: center;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

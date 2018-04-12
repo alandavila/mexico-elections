@@ -43,15 +43,43 @@
       <!--projects grid-->
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
-          <h1 class="text-center jumbotron">Data table with votes per coalition<h1>
+          <h1 class="text-center jumbotron">Data table with votes per party coallision for each state<h1>
         </div>
       </div>
       <div class="row ">
         <div class=" col-xs-offset-1 col-xs-10">
-          <h3 class="text-center">Project Description Title</h3>
+          <h3 class="text-center">2012 presidential election vote tally </h3>
           <p class="text-center">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            This table contains the number of votes that each party coallision obtained in each of Mexico's states. Note that voters were allowed to cast their vote
+            for a number of options in order to support the same candidate. This is due to Mexico's electoral law. If many parties form a coallision, different combinations of their
+            logos might appear in the ballot. The candidate of the coallision would get the sum of all the votes casted in favor of any of such combinations. We will only list the main coalition
+            party in each plot for this analysis.
+          </p>
+          <div class="row ">
+            <div class="col-xs-offset-3 col-xs-6">
+            <div class="table-responsive ">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>Main Coalition Party</td>
+                    <td>Members of the Coalition</td>
+                  </tr>
+                  <tr>
+                    <td>PRI</td>
+                    <td>PRI, PRI_PVEM, PVEM, NVA_ALIANZA</td>
+                  </tr>
+                  <tr>
+                    <td>PAN</td>
+                    <td>PAN</td>
+                  </tr>
+                  <tr>
+                    <td>PRD</td>
+                    <td>PRD, PRD_MC, PRD_PT, PRD_PT_MC, MC, PT, PT_MC</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row ">
@@ -699,9 +727,5 @@
           </script>
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
