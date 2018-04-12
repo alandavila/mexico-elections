@@ -52,11 +52,18 @@ def get_state_votes_of(party = ['TOTAL_VOTOS']):
         party=coalition
     else:
         party = party[0]
-        mx_pres_2012_df = mx_pres_2012_df[['ID_ESTADO','NOMBRE_ESTADO',party]]
+        mx_pres_2012_df = mx_pres_2012_df[['ID_ESTADO','NOMBRE_ESTADO', 'LISTA_NOMINAL', party]]
     #aggregate results by state
     mx_pres_2012_gp = mx_pres_2012_df.groupby(['NOMBRE_ESTADO'])
-    mx_pres_2012_total = mx_pres_2012_gp[party].sum()
-    mx_pres_2012_percent = mx_pres_2012_total/mx_pres_2012_total.sum()
+    #need to provide list to group by in order to get a dataframe
+    tmp_list = []
+    tmp_list.append(party)
+    mx_pres_2012_total = mx_pres_2012_gp[tmp_list].sum()
+    mx_pres_2012_nominal = mx_pres_2012_gp[['LISTA_NOMINAL']].sum()
+    #normalize by states total voters
+    merged = pd.merge(mx_pres_2012_nominal,mx_pres_2012_total, left_index=True, right_index=True)
+    mx_pres_2012_percent = merged[party]/merged['LISTA_NOMINAL']
+    mx_pres_2012_percent = mx_pres_2012_percent/mx_pres_2012_percent.sum()
     mx_pres_2012_percent = mx_pres_2012_percent.apply(lambda x: 100*round(x,2))
     return mx_pres_2012_percent
 #2012 coalitions:
