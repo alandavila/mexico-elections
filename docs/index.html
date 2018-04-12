@@ -51,18 +51,22 @@
           <a href="plot_template_one.html">
             <img class="img-responsive img_main" src="img/PRI.png" alt="PRI">
           </a>
-          <h4 class="text-center">Distribution of votes for PRI-coalition by percent</h4>
-          <p class="text-center">Color coded distribution of votes percent of each state</p>
+          <h4 class="text-center">Distribution of votes for the PRI-coalition by percent</h4>
+          <p class="text-center">Each state's votes tally was divided by the states voting population. A percentage per state was obtained from those values</p>
         </div>
         <div class="col-sm-4 col-xs-12">
           <h3 class="text-center">Geographical party preferences by state during Mexico's presidential elections</h3>
           <p class="text-center">
             The present analysis uses presidential voting data from the
             <a class="text-primary" href="https://www.ine.mx/">Instituto Nacional Electoral.</a>
-            It contains the votes given to each party or coalition during the 2012 presidential election. The votes are registered for each of the "voting districts." I am interested
-            in showing the distribution electoral preferences for each party-coallition over the country. I aggregated the votes for each state and coallition and plotted them in a <map>
-            of Mexico. I color coded the percentage of votes obtained in each state. Darker color means higher percentage of votes. The percentage of votes was normalized by state population
-            in order to show a meaninful geopraphical distribution of electoral suppor and remove the bias to to state population (STEP PENDING...).
+            It contains the votes obtained by each party or coalition during the 2012 presidential election.
+            The data set contains the votes registered in each of the "voting districts." I am interested
+            in showing the distribution of electoral preferences for each party-coallition over the country. I aggregated the votes for each state and coalition and plotted them in a map
+            of Mexico. I normalized the per-state vote count by dividing each state's votes by the nominal list (number of registered voters for the state).
+            This is done in order to show a meaninful geopraphical distribution of electoral support and remove the bias due to state population.
+            This gives us the number of "per voter votes" in each state and we can obtain the percent contribution  for each state.
+            I color coded the percentage of per-voter-votes obtained in each state
+            A darker color means higher percentage of votes (normalized by state population).
             </map>
 
         </div>
