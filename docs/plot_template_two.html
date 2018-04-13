@@ -20,6 +20,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -54,7 +55,12 @@
             a good portion of the votes for PAN.
         </div>
         <div class="col-md-5 col-xs-12">
-            <img class="img-responsive img_main" src="img/PAN.png" alt="PAN">
+            <div id="pan_plotly"></div>
+              <script>
+                $(function(){
+                  $("#pan_plotly").load("pan_2012.html");
+                });
+              </script>
           <h4 class="text-center">PAN percent distribution of votes</h4>
           <p class="text-center">Each state's votes tally was divided by the states voting population. A percentage per state was obtained from those values</p>
         </div>
