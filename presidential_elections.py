@@ -73,7 +73,7 @@ def get_state_votes_of(party = ['TOTAL_VOTOS']):
 #['NUM_VOTOS_NULOS', 'NUM_VOTOS_CAN_NREG']
 #['TOTAL_VOTOS']
 #['LISTA_NOMINAL']    
-total_votes = get_state_votes_of(party=['TOTAL_VOTOS'])
+total_votes = get_state_votes_of(party=['PAN'])
 
 mex_districts['per_state_vote'] = ''
 for _ in range(1, 33):
@@ -83,7 +83,7 @@ for _ in range(1, 33):
 mex_districts_values = list(mex_districts['per_state_vote'])
 
 
-def generate_colorscale(lcolor, dcolor, bins = 30, values=None):
+def generate_colorscale(lcolor=[0,0,0], dcolor=[255,255,255], bins = 30, values=None):
     vmax = max(values)
     vmin = min(values)
     binning = []
@@ -92,13 +92,14 @@ def generate_colorscale(lcolor, dcolor, bins = 30, values=None):
         x = vmin + (i/(bins-2))*(vmax - vmin)
         binning.append(round(x, 3))
     for i in range(0,bins ):
-        a = lcolor + i*(dcolor - lcolor)/(bins - 1)
-        b = lcolor + i*(dcolor - lcolor)/(bins - 1)
-        scl.append(f'rgb({int(a)},{int(b)},{255})')
+        r = lcolor[0] + i*(dcolor[0] - lcolor[0])/(bins - 1)
+        g = lcolor[1] + i*(dcolor[1] - lcolor[1])/(bins - 1)
+        b = lcolor[2] + i*(dcolor[2] - lcolor[2])/(bins - 1)
+        scl.append(f'rgb({int(r)},{int(g)},{int(b)})')       
     scl = [i for i in reversed(scl)]
     return scl, binning
-    
-scl, binning_endpoints = generate_colorscale(15,200,32,mex_districts_values)
+
+scl, binning_endpoints = generate_colorscale([232,197,230],[98,1,92],32,mex_districts_values)
 
 fig = ff.create_mx_choropleth(mex_districts_list,\
                               mex_districts_values, \
